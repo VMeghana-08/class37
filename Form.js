@@ -19,16 +19,18 @@ class Form{
 
       this.input.position(130,160)
         this.button.position(250,200)
-        this.button.mousePressed(function(){
+        this.button.mousePressed(()=>{
         
-
-         var name=input.value()
+        this.input.hide();
+        this.button.hide();
+         player.name=this.input.value()
          playerCount+=1
-         player.update(name)
+         player.index=playerCount
+         player.update(player.name)
          player.updateCount(playerCount)
 
-         greeting.html("hello "+name)
-         grreting.position(130,160)
+         this.greeting.html("hello "+player.name)
+         this.greeting.position(130,160)
 
         }
 
